@@ -1,0 +1,20 @@
+# Nexa runtime + optional voice dependencies (Windows / Python 3.13)
+# Install inside the project's activated venv:
+# python -m pip install -r requirements_voice.txt
+
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+ddgs>=9.0.0
+
+# Voice input: faster-whisper uses PyAV for bundled FFmpeg decoding.
+numpy>=1.26,<3.0
+av>=14.0.0
+faster-whisper>=1.2.1
+sounddevice>=0.5.2
+
+# Voice output: online neural TTS + local audio playback.
+edge-tts>=7.3.1
+pygame>=2.6.1
+
+# Optional offline Windows SAPI fallback when online Edge TTS is unreachable.
+pyttsx3>=2.99
